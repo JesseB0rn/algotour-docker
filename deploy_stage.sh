@@ -1,0 +1,1 @@
+rsync -av -e ssh ./staging/ $ALGOTOUR_REMOTE:/ --progress

@@ -1,3 +1,4 @@
 firebase.json
 venv/
 .DS_Store
+staging/
