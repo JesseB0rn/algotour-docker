@@ -1,0 +1,10 @@
+services:
+  qgis:
+    build: .
+    container_name: qgis-model-firebase
+    volumes:
+      - ./firebase.json:/root/firebase.json
+      - ./riskmaps:/root/riskmaps
+      - ./dem:/root/dem
+      - ./config.py:/root/config.py
+      - ./routes:/root/routes
