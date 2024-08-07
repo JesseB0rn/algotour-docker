@@ -3,7 +3,10 @@ Watches for changes in firestore collection, then processes sequentially
 Also sanitizes coords
 """
 from config import *
-from local_config import *
+try:
+  from local_config import *
+except ImportError:
+  pass
 
 import json
 import subprocess
