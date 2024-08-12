@@ -94,7 +94,7 @@ def on_snapshot(col_snapshot, changes, read_time):
 collection_ref = db.collection('tours')
 
 # Watch the collection
-col_query_watch = collection_ref.where(filter=FieldFilter("state", '==', 'waiting')).on_snapshot(on_snapshot)
+col_query_watch = collection_ref.where("state", '==', 'waiting').on_snapshot(on_snapshot)
 
 # Keep the application running to listen for changes
 import time
