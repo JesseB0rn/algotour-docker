@@ -45,8 +45,8 @@ def calculate_path(startpoint: GeoPoint, endpoint: GeoPoint, model = EModel.ALL)
   print("running:", cmd)
 
   result = subprocess.check_output(cmd, shell=True)
-  print(outpath := json.loads(result)['results']['outputpath'])
   
+  outpath = json.loads(result)['results']['outputpath']
   return outpath
 
 # Function to process new document
