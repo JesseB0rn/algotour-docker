@@ -693,7 +693,7 @@
         <Option type="List" name="ITERATIONS">
           <Option type="Map">
             <Option type="int" name="source" value="2"/>
-            <Option type="int" name="static_value" value="10"/>
+            <Option type="int" name="static_value" value="3"/>
           </Option>
         </Option>
         <Option type="List" name="MAX_ANGLE">

@@ -50,7 +50,7 @@ def calculate_path(startpoint: GeoPoint, endpoint: GeoPoint, model = EModel.ALL)
   return outpath
 
 # Function to process new document
-def process_new_document(doc_data, ref):
+def process_new_document(doc_data: dict, ref):
     print("Processing new document:")
     ref.update({
           'state': 'processing'
@@ -62,12 +62,11 @@ def process_new_document(doc_data, ref):
     print(model)
     outpath = calculate_path(doc_data['startpoint'], doc_data['endpoint'], model)
 
-    o = json.load(open(outpath))
-    print(o)
     with open(outpath) as o:
       print('writing ref')
+      r = o.read()
       ref.update({
-          'route': o.read(),
+          'route': r,
           'state': 'processed'
       })
     print('request closed')

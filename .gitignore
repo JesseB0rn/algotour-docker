@@ -4,3 +4,4 @@ venv/
 staging/
 local_config.py
 *.pyc
+routes/*.geojson
